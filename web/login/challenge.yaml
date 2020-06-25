@@ -1,0 +1,18 @@
+author: BrownieInMotion
+description: |-
+  I made a cool login page. I bet you can't get in!
+
+  Site: {{link}}
+flag: flag{0bl1g4t0ry_5ql1}
+name: login
+provide: ['./index.js']
+
+containers:
+  main:
+    build: .
+    ports: [3000]
+
+expose:
+  main:
+  - target: 3000
+    http: login

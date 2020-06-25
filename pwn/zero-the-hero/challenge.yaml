@@ -1,0 +1,23 @@
+name: zero-the-hero
+author: NotDeGhost
+description: |-
+  One null to rule them all, one null to find them.
+
+  One null to bring them all,
+
+  `nc {{host}} {{port}}`
+provide:
+- ./zero-the-hero.tar.gz
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31643

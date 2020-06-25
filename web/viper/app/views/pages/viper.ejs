@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head") %>
+</head>
+
+<body class="container">
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                Viper
+            </a>
+    
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    
+    </div>
+</nav>
+
+<main>
+    <div class="row">
+        <div class="col-sm-8">    
+                <h1>This is your snake: <%= name %></h1>
+                <p>Hopefully you enjoy this very nice ascii art!</p>
+                <pre>
+                    ---_ ......._-_--.
+                    (|\ /      / /| \  \
+                    /  /     .'  -=-'   `.
+                   /  /    .'             )
+                 _/  /   .'        _.)   /
+                / o   o        _.-' /  .'
+                \          _.-'    / .'*|
+                 \______.-'//    .'.' \*|
+                  \|  \ | //   .'.' _ |*|
+                   `   \|//  .'.'_ _ _|*|
+                    .  .// .'.' | _ _ \*|
+                    \`-|\_/ /    \ _ _ \*\
+                     `/'\__/      \ _ _ \*\
+                    /^|            \ _ _ \*
+                   '  `             \ _ _ \      ASH (+VK)
+                                     \_
+              
+                </pre>
+        </div>
+    
+        <div class="col-sm-4">        
+            <h3>Edit your Vipers name!</h3>
+            <form action="/editviper" method="get">
+                <div class="form-group">
+                  <label for="viperNameInput">viperName</label>
+                  <input type="text" class="form-control" id="viperNameInput" name="viperName" placeholder="Enter viperName">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p id="analyticsUrl"><%- analyticsUrl %></p>
+        <script src="/analytics.js"></script>
+    </footer>
+
+</body>
+
+</html>

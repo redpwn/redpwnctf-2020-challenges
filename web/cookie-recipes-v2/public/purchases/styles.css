@@ -1,0 +1,17 @@
+.purchases-wrapper {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "recipes content";
+    margin: 20px;
+}
+
+.recipes-wrapper {
+    grid-area: recipes;
+}
+
+.content-wrapper {
+    grid-area: content;
+}

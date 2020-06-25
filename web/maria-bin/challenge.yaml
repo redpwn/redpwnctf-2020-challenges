@@ -1,0 +1,29 @@
+author: ginkoid, NotDeGhost
+containers:
+  main:
+    build: .
+    ports:
+    - 8001
+    - 8002
+description: |-
+  **ma·ri·a**
+  
+  _noun_
+  
+  plural form of mare.
+
+  [{{challenge.expose.main[0].http}}](https://{{challenge.expose.main[0].http}})
+
+  Submit at: [admin-bot.redpwnc.tf/submit?challenge=maria-bin](https://admin-bot.redpwnc.tf/submit?challenge=maria-bin)
+expose:
+  main:
+  - target: 8001
+    http:
+      raw: app.maria-bin.tk
+  - target: 8002
+    http:
+      raw: raw.maria-bin.tk
+flag: flag{s0ci3tat1bus_3qu1tuM_sEmp3r}
+name: maria-bin
+provide:
+- maria-bin.tar

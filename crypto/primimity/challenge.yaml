@@ -1,0 +1,11 @@
+name: primimity
+author: Boolean
+description: |-
+  People claim that RSA with two 1024-bit primes is secure. But I trust no one. That's why I use three 1024-bit primes.
+  
+  I even created my own prime generator to be extra cautious!
+flag:
+  file: ./flag.txt
+provide:
+- ./primimity.py
+- ./primimity-public-key.txt

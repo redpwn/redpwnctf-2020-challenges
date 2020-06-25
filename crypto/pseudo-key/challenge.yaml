@@ -1,0 +1,11 @@
+name: pseudo-key
+author: Boolean
+description: |-
+  Keys are not always as they seem...
+
+  **Note:** Make sure to wrap the plaintext with `flag{}` before you submit!
+flag:
+  file: ./flag.txt
+provide:
+- ./pseudo-key.py
+- ./pseudo-key-output.txt

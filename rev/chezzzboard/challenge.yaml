@@ -1,0 +1,21 @@
+name: chezzzboard
+author: dns
+description: |-
+  I'll also give you the flag if you beat me in chess
+
+  `nc {{host}} {{port}}`
+
+flag:
+  file: ./bin/flag.txt
+provide:
+- ./bin/chezzz
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31611

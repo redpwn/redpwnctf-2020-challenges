@@ -1,0 +1,26 @@
+body {
+  color: white;
+  text-align: center;
+}
+body {
+  background-image: url("?path=assets/81f.gif");
+}
+h2{
+  color:red;
+  font-family: 'Comic Sans MS'
+}
+h4{
+  background-image: url('?path=assets/rainbow-spectral-gradient.png');
+  background-size: 100% 100%;
+}
+p#about{
+  background-color: blue;
+  font-family: monospace;
+  color: yellow;
+  font-size: 15px"
+}
+#tux1 {
+  position: absolute;
+  top: 5em;
+  left: -100px;
+}

@@ -1,0 +1,15 @@
+author: arinerron
+description: 'This bash script evaluates to `echo dont just run it, dummy # flag{...}`
+  where the flag is in the comments.
+
+
+  The comment won''t be visible if you just execute the script. How can you mess with
+  bash to get the value right before it executes?
+
+
+  Enjoy the intro misc chal.'
+flag:
+  file: ./flag.txt
+name: uglybash
+provide:
+- ./cmd.sh

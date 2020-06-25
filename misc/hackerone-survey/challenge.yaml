@@ -1,0 +1,14 @@
+author: HackerOne
+description: |-
+  HackerOne would like to identify HackerOne users who are competing in
+  redpwnCTF for research purposes. Please fill out their quick survey
+  [here](https://docs.google.com/forms/d/e/1FAIpQLSc4HFgp2IqdlvJk4ZQewuedRGiOlaF3SytykLqqGmGYjI_hyg/viewform).
+
+  Privacy Policies:
+  * [redpwnCTF](https://ctf.redpwn.net/privacy.txt)
+  * [HackerOne](https://www.hackerone.com/privacy)
+flag: flag{rac3_f0r_H@ck3rOne_surv3y!}
+name: hackerone-survey 
+value: 1
+tiebreakEligible: false
+visible: true

@@ -1,0 +1,29 @@
+.store-wrapper {
+    display: grid;
+    grid-area: body;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "recipes info"
+        "recipes promotion";
+    margin: 20px;
+}
+
+.recipes-wrapper {
+    grid-area: recipes;
+}
+
+.info-wrapper {
+    grid-area: info;
+}
+
+.promotion-wrapper {
+    grid-area: promotion;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 350px;
+}

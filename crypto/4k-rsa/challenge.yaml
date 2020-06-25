@@ -1,0 +1,8 @@
+name: 4k-rsa
+author: Boolean
+description: |-
+  Only n00bz use 2048-bit RSA. True gamers use keys that are at least 4k bits long, no matter how many primes it takes...
+flag:
+  file: ./flag.txt
+provide:
+- ./4k-rsa-public-key.txt

@@ -1,0 +1,21 @@
+name: static-static-hosting 
+author: BrownieInMotion
+description: |-
+  Seeing that my last website was a success, I made a version where instead
+  of storing text, you can make your own custom websites! If you make something cool,
+  send it to me [here](https://admin-bot.redpwnc.tf/submit?challenge=static-static-hosting)
+
+  Site: {{link}}
+
+  Note: The site is entirely static. Dirbuster will not be useful in solving it.
+flag: flag{wh0_n33d5_d0mpur1fy}
+
+containers:
+  main:
+    build: .
+    ports: [80]
+
+expose:
+  main:
+  - target: 80
+    http: static-static-hosting

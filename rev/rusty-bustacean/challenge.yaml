@@ -1,0 +1,6 @@
+name: rusty-bustacean
+description: Something about a bus station, a crab with implants, and some rust.
+author: MrSlick
+flag: flag{whats_the_difference...}
+provide:
+- ./rusty-bustacean.exe

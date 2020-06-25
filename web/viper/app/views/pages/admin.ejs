@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head") %>
+</head>
+
+<body class="container">
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                Viper
+            </a>
+    
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    
+    </div>
+</nav>
+
+<main>
+<div class="row">  
+    <div class="jumbotron">
+        <h1>Viper</h1>
+        <p>Hello administrator! Welcome to the world's best place to create your own ascii snake</p>
+        <h3>Create an admin snake</h3>
+        <form action="/admin/create" method="get">
+            <div class="form-group">
+              <label for="viperIdInput">viperId</label>
+              <input type="text" class="form-control" id="viperIdInput" name="viperId" placeholder="Enter viperId">
+            </div>
+            <input type="hidden" name="csrfToken" value="<%= csrfToken %>" /> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>
+</main>
+
+</body>
+</html>

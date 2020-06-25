@@ -1,0 +1,20 @@
+author: BrownieInMotion
+containers:
+  main:
+    build: .
+    ports:
+    - 3000
+description: |-
+  I want to buy some of these recipes, but they are awfully expensive.
+  Can you take a look?
+
+  Site: {{link}}
+
+expose:
+  main:
+  - target: 3000
+    http: cookie-recipes-v2
+flag: flag{n0_m0r3_gu3551ng}
+name: cookie-recipes-v2
+provide:
+- index.js

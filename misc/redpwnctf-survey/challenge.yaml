@@ -1,0 +1,10 @@
+author: redpwn
+description: |-
+  We want to hear about you and your experience during this CTF! We put a ton of work into this and would really appreciate your honest feedback. Please have **each member of your team** fill out [this survey](https://forms.gle/NJ5LZLNgEGkWtVE67). There will be a flag at the end.
+
+  Thanks again for participating in redpwnCTF!
+flag: flag{thank5_f0r_p1ay1ng_r3dpwnCTF2020} 
+name: redpwnctf-survey 
+value: 1
+tiebreakEligible: false
+visible: true

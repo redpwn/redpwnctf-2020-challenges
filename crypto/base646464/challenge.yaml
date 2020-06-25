@@ -1,0 +1,8 @@
+name: base646464
+author: NotDeGhost
+description: Encoding something multiple times makes it exponentially more secure!
+flag:
+  file: ./bin/flag.txt
+provide:
+- ./bin/cipher.txt
+- ./bin/generate.js

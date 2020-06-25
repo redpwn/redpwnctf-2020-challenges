@@ -1,0 +1,25 @@
+name: albatross
+author: arinerron
+description: |-
+  Another pyjail. Yup. Just, this time, it's a payload golfing challenge.
+
+  `nc {{host}} {{port}}`
+
+  **UPDATE:** The strict blacklist is bypassable using a "read the man page /
+  docs / spec"-style trick. Don't get too stuck trying to bypass it.
+
+provide:
+- ./albatross.py
+- Dockerfile
+flag:
+  file: ./flag.txt
+
+containers:
+  main:
+    build: .
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31156

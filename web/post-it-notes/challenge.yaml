@@ -1,0 +1,21 @@
+author: arinerron
+description: |-
+  Request smuggling has many meanings. Prove you understand at least one of them
+  at {{link}}.
+
+  Note: There are a lot of time-wasting things about this challenge. Focus on
+  finding the vulnerability on the backend API and figuring out how to exploit
+  it.
+flag:
+  file: ./flag.txt
+name: post-it-notes
+provide:
+- ./source.zip
+containers:
+  main:
+    build: .
+    ports: [1337]
+expose:
+  main:
+  - target: 1337
+    tcp: 31957 # TODO: update

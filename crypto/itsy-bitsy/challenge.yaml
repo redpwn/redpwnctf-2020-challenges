@@ -1,0 +1,20 @@
+name: itsy-bitsy
+author: Boolean
+description: |-
+  The itsy-bitsy spider climbed up the water spout...
+
+  `nc {{host}} {{port}}`
+flag: 
+  file: ./flag.txt
+provide:
+- ./itsy-bitsy.py
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports: [9999]
+expose:
+  main:
+  - target: 9999
+    tcp: 31284

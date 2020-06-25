@@ -1,0 +1,16 @@
+service ctf
+{
+  disable     = no
+  socket_type = stream
+  protocol    = tcp
+  wait        = no
+  port        = 9999
+  bind        = 0.0.0.0
+  type        = UNLISTED
+  user        = ctf
+  server      = /usr/local/bin/node
+  server_args = /ctf/calculator.js
+  banner_fail = /etc/banner_fail
+  rlimit_cpu  = 1
+  #per_source  = 10
+}

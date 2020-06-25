@@ -1,0 +1,21 @@
+name: house-of-red
+author: NotDeGhost
+description: |-
+  Red as oloroso, white as smog.
+  
+  {{link}}
+provide:
+- ./house-of-red.tar.gz
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31485

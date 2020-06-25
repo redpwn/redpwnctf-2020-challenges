@@ -1,0 +1,29 @@
+name: got-stacks
+author: Jim
+description: |-
+  This website has great products! Thankfully there are enough products to go
+  around; I'm tryna burn some mad stacks for you all.
+
+  Site: {{link}}
+
+flag: flag{H4cK_w4f_p4s5_iT_0N_d0_Y0u_H4ve_St4cks}
+
+provide:
+- ./got-stacks.tar.gz
+
+containers:
+  app:
+    build: ./
+    resources:
+      limits:
+        cpu: 100m
+        memory: 300M
+      requests:
+        cpu: 50m
+        memory: 100M
+    ports: [31337]
+
+expose:
+  app:
+  - target: 31337
+    http: got-stacks

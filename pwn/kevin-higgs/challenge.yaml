@@ -1,0 +1,26 @@
+author: arinerron
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+description: |-
+  It's basically Rowhammer, right?
+
+  `nc {{host}} {{port}}`
+
+  **UPDATE:** Although the binary claims that no libc is provided, we chose to provide
+  the Dockerfile mid-CTF. You can find the libc version from the Dockerfile.
+visible: true
+expose:
+  main:
+  - target: 9999
+    tcp: 31956
+flag:
+  file: ./flag.txt
+name: kevin-higgs
+provide:
+- ./kevin-higgs
+- ./Dockerfile
+

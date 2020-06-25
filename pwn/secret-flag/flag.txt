@@ -1,0 +1,1 @@
+fakeflag{to_demonstrate_solve_script}

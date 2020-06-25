@@ -1,0 +1,27 @@
+name: CaaSiNO
+author: asphyxia
+description: |-
+  Who needs regex for sanitization when we have VMs?!?!
+
+  The flag is at /ctf/flag.txt
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./run/flag.txt
+
+containers:
+  main:
+    build: .
+    ports:
+    - 9999
+    resources:
+      limits:
+        memory: 200Mi
+      requests:
+        memory: 150Mi
+expose:
+  main:
+  - target: 9999
+    tcp: 31273
+provide:
+- ./run/calculator.js

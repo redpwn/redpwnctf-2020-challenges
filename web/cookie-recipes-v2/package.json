@@ -1,0 +1,17 @@
+{
+  "name": "race",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^6.0.1",
+    "dotenv": "^8.2.0",
+    "mime": "^2.4.4",
+    "url": "^0.11.0"
+  }
+}

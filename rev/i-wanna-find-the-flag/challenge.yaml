@@ -1,0 +1,9 @@
+name: i-wanna-find-the-flag
+description: |-
+  Little Brother: Help! I can't beat this game. It's too hard. You're a pro gamer, right?
+
+  You: SURE :)
+author: MrSlick
+flag: flag{gms_succs_kiddo}
+provide:
+- ./i-wanna-find-the-flag.exe

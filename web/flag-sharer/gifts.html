@@ -1,0 +1,38 @@
+<!doctype html>
+<h2>Hello {{ name }}</h2>
+<h3>Gift a flag to someone else!</h3>
+<ul>
+  {{ #gifts }}
+    <li>
+      <span>{{ . }}</span>
+      <form action='/send' method='post'>
+        <span>Recipient:</span>
+        <input type='text' name='recipient'>
+        <textarea style='display: none;' name='gift'>{{ . }}</textarea>
+        <textarea style='display: none;' name='csrf'>{{ csrf }}</textarea>
+        <button type='submit'>Send!</button>
+      </form>
+    </li>
+  {{ /gifts }}
+</ul>
+<h3>Your items</h3>
+<ul>
+  {{ #items }}
+    <li>
+      <a href='/item?name={{ . }}'>{{ . }}</a>
+    </li>
+  {{ /items }}
+  {{ ^items }}
+    <li>No items yet</li>
+  {{ /items }}
+</ul>
+{{ #error }}
+  <span class='error'>An error occured: {{ error }}</span>
+  <style>
+    @import '/static/{{{ error }}}.css';
+    .error {
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+{{ /error }}

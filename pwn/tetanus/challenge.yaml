@@ -1,0 +1,22 @@
+name: tetanus
+author: Poortho
+description: |-
+  I heard rust is memory safe. Can you prove me wrong?
+
+  `nc {{host}} {{port}}`
+provide:
+- ./tetanus.tar.gz
+- ./bin/tetanus.rs
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31069

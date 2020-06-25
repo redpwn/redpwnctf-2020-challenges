@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #66cc66;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 54px;
+    margin: 10px;
+}
+
+input, button {
+    border: none;
+    font-size: 32px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+ul {
+    font-size: 32px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.column {
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+}

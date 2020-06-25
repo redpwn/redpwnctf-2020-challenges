@@ -1,0 +1,29 @@
+name: ratification
+author: Tux
+description: |-
+  Proclamation on ratification of redpwnCTF.
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./flag.txt
+provide:
+- ./server.py
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+    resources:
+      limits:
+        cpu: 300m
+        memory: 150Mi
+      requests:
+        cpu: 100m
+        memory: 30Mi
+
+expose:
+  main:
+  - target: 9999
+    tcp: 31752

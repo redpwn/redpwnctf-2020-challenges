@@ -1,0 +1,21 @@
+name: fetusmaze
+author: dns
+description: |-
+  You can run this one without installing freeglut! Thanks to xusheng for help and inspiration.
+
+  `nc {{host}} {{port}}`
+
+flag:
+  file: ./bin/flag.txt
+provide:
+- ./bin/maze
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31031

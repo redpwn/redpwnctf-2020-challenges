@@ -1,0 +1,8 @@
+author: ItzSomebody
+description: |-
+  Chris won't stop making Java RE challenges... but he might if you find the
+  correct key to this challenge! Flag is in the form of `flag{answer_here}`
+flag: flag{4f162351e2a0bb6e1fc34325972c1de8}
+name: java-is-ez-2
+provide:
+- ./bin/JavaIsEZ2.class

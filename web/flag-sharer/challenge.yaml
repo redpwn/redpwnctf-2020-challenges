@@ -1,0 +1,19 @@
+author: ginkoid
+containers:
+  main:
+    build: .
+    ports:
+    - 8000
+description: |-
+  {{link}}
+
+  Submit at: [flag-sharer-admin-bot.redpwnc.tf/submit?challenge=flag-sharer](https://flag-sharer-admin-bot.redpwnc.tf/submit?challenge=flag-sharer)
+expose:
+  main:
+  - target: 8000
+    http:
+      raw: flag-sharer.ml
+flag: flag{th3_4dmIn_Giv3s_thE_b3st_Fl@gS}
+name: flag-sharer
+provide:
+- flag-sharer.tar

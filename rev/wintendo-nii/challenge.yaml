@@ -1,0 +1,23 @@
+name: wintendo-nii
+author: imyxh
+description: |-
+  Someone gave me this weird knockoff game console and I think it's hiding a
+  flag. I managed to dump the firmware and host it on this server; can you take
+  it from here?
+
+
+  `nc {{host}} {{port}}`
+provide:
+- ./bin/nii
+flag: flag{shellcoding_is_a_rev_skill,_too!_8F13E8F6}
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31215

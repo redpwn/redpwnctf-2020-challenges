@@ -1,0 +1,21 @@
+name: bubbly
+author: dns
+description: |-
+  It never ends
+
+  `nc {{host}} {{port}}`
+
+flag:
+  file: ./bin/flag.txt
+provide:
+- ./bin/bubbly
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31039

@@ -1,0 +1,23 @@
+name: tetanus-shot
+author: Poortho
+description: |-
+  Okay, so maybe using unsafe code was a bad idea. But now we're fine,
+  right?
+
+  `nc {{host}} {{port}}`
+provide:
+- ./tetanus-shot.tar.gz
+- ./bin/tetanus_shot.rs
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31754

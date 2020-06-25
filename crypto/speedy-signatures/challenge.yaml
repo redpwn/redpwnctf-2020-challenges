@@ -1,0 +1,21 @@
+name: speedy-signatures
+author: Tux
+description: |-
+  Guess my number!
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./flag.txt
+provide:
+- ./server.py
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports: [9999]
+
+expose:
+  main:
+  - target: 9999
+    tcp: 31452

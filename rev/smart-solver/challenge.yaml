@@ -1,0 +1,9 @@
+name: SMarT-solver
+description: |-
+  Find the correct flag. :)
+
+    **NOTE:** All letters in the flag are lowercase
+author: MrSlick
+flag: flag{thequickbrownfoxjumpedoverthelazydogandlearnedhowtoautomateanalysis}
+provide:
+- ./SMarT-solver

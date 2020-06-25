@@ -1,0 +1,117 @@
+docker:
+  image:
+    prefix: gcr.io/redpwn/ctf/2020
+
+flagFormat: flag\{[a-zA-Z0-9_,.'?!@$<>*:-]*\}
+
+defaults:
+  containers:
+    resources:
+      limits:
+        cpu: 100m
+        memory: 150Mi
+      requests:
+        cpu: 10m
+        memory: 30Mi
+
+backends:
+- resolve: k8s
+  options:
+    kubeContext: gke_redpwn_us-east1-b_challs
+    domain: 2020.redpwnc.tf
+    annotations:
+      ingress:
+        traefik.ingress.kubernetes.io/router.tls: "true"
+        traefik.ingress.kubernetes.io/router.middlewares: "nocontenttype@file"
+- resolve: rctf
+  options:
+    scoring:
+      minPoints: 100
+      maxPoints: 500
+    sortOrder:
+    # Easy misc
+    - sanity-check
+    - discord
+    - uglybash
+    - hackerone-survey
+    
+    # Easy web
+    - inspector-general
+    - anti-textbook
+    - panda-facts
+    - login
+    - static-pastebin
+    
+    
+    # Easy crypto
+    - base6464
+    - pseudo-key
+    - 12-shades-of-redpwn
+    
+    # Easy rev
+    - ropes
+    - bubbly
+
+    # Easy pwn
+    - coffer-overflow-0
+    - coffer-overflow-1
+    - coffer-overflow-2
+    - secret-flag
+    - the-library
+    
+    # Medium misc
+    - caasino
+    - albatross
+    - expohash
+    
+    # Medium Web
+    - got-stacks
+    - viper
+    - panda-facts-v2
+    - cookie-recipes-v2
+    - static-static-hosting
+    - tux-fanpage
+    
+    # Medium crypto
+    - 4k-rsa
+    - alien-transmissions-v2
+    - primimity
+    - seekrypt
+    - speedy-signatures
+    - worst-pw-manager
+    
+    # Medium rev
+    - aall
+    - a-round-mechanism
+    - javaisez2
+    - smart-solver
+    - i-wanna-find-the-flag
+    
+    # Medium pwn
+    - dead-canary
+    - skywriting
+    - four-function-heap
+    
+    # Hard web
+    - flag-sharer
+    - maria-bin
+    
+    # Hard crypto
+    - itsy-bitsy
+    - newcrypt
+    - jeopardy
+    - ratification
+    
+    # Hard rev
+    - r1sc
+    - fetusmaze
+    - wintendo-nii
+    - rusty-bustacean
+
+    # Hard pwn
+    - pyquatre
+    - kevin-higgs
+    - tetanus
+    - tetanus-shot
+    - zero-the-hero
+    - house-of-red

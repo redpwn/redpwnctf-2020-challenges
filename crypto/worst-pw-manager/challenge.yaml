@@ -1,0 +1,6 @@
+name: worst-pw-manager
+description: I found this in-progress password manager on a dead company's website. Seems neat.
+author: MrSlick
+flag: flag{crypto_is_stupid_and_python_is_stupid}
+provide:
+- ./worst-pw-manager.zip

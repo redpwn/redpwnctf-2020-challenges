@@ -1,0 +1,6 @@
+author: imyxh
+description: Look, Mum, no opcodes!
+name: r1sc
+flag: 'flag{actually_3_instructions:_subleq,_ret,_int3}'
+provide:
+- ./r1sc

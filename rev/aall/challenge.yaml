@@ -1,0 +1,25 @@
+author: arinerron
+description: |-
+  how many layers of vm are you on
+
+  like,, maybe 5, or 6 right now my dude
+
+  you are like a baby... watch this
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./flag.txt
+name: aall
+provide:
+- ./aall.py
+- ./Dockerfile
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports: [9999]
+expose:
+  main:
+  - target: 9999
+    tcp: 31755

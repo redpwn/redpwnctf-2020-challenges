@@ -1,0 +1,8 @@
+name: seekrypt
+author: Tux
+description: Secrets encrypted.
+flag:
+  file: ./flag.txt
+provide:
+- ./chall.py
+- ./output

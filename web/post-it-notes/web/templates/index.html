@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Create a POST-it Note</title>
+    </head>
+    <body>
+        <span>
+            <form action="/create" method="POST" style="padding: 2em;">
+                <!-- btw making this website was the pinnacle of my web development career -->
+                <h1>Create a POST-it Note</h1>
+                <label for="title">Enter a note title:</label><br>
+                <input id="title" name="title" placeholder="My Google passords"><br><br>
+                <label for="contents">Enter your note's contents:</label><br>
+                <textarea name="contents" id="contents">
+                    i use arch btw
+                </textarea><br><br>
+                <input type="submit" value="Create POST-it Note"><br><br>
+                <img src="/protected-by-captcha.png" onclick="window.location='https://www.google.com/recaptcha'">
+            </form>
+
+            <br><br><hr><br><br>
+
+            <b>We take security very, very seriously.</b> All of your information is protected securely in our systems, and it can never be accessed by unauthorized 3rd parties.<br><br>
+
+            We have been certified as <i>Unhackable™</i> by our software developers since 2020. By doing business with us, you agree that we are very secure but that you won't sue us anyway if we accidentally leak all of your personal information.<br><br>
+
+            In the impossible event that there is a breach (don't worry this will never happen) we will probably notify you, but expect at least an 8 month delay (our CEO needs time to sell off his shares before it takes a dive). But don't worry, you don't need to worry about that since there will never be a breach. We are <i>Unhackable™</i>.<br>
+        </span>
+    </body>
+</html>

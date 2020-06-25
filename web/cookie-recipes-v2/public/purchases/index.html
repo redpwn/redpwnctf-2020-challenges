@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cookie Recipes</title>
+        <meta name="description" content="Cookie Recipes V2">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <script src="/js/scripts.js"></script>
+        <script src="scripts.js"></script>
+        <div class="page-wrapper">
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="/store/">Store</a></li>
+                    <li ><a class="active" href="/purchases/">Purchases</a></li>
+                </ul>
+            </div>
+            <div class="purchases-wrapper">
+                <div class="section recipes-wrapper">
+                    <h1>Purchased Recipes</h1>
+                    <div id="recipe-cards" class="card-wrapper">
+                        <template id="recipe-card-template">
+                            <div class="card">
+                                <h2>Recipe Name</h2>
+                                <p>Recipe Description</p>
+                                <button>View</button>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="section content-wrapper">
+                    <h1>Recipe Content</h1>
+                    <div id="content-wrapper" class="card-wrapper">
+                        <template id="content-card-template">
+                            <div id="content-card" class="card"></div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

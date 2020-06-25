@@ -1,0 +1,19 @@
+name: tux-fanpage
+author: BrownieInMotion
+description: |-
+  My friend made a fanpage for Tux; can you steal the source code for me?
+
+  Site: {{link}}
+provide:
+- index.js
+flag: flag{tr4v3rsal_Tim3}
+
+containers:
+  main:
+    build: .
+    ports:
+    - 3000
+expose:
+  main:
+  - target: 3000
+    http: tux-fanpage

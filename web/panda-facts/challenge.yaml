@@ -1,0 +1,20 @@
+author: BrownieInMotion
+containers:
+  main:
+    build: .
+    ports:
+    - 3000
+description: |-
+  I just found a hate group targeting my favorite animal. Can you try
+  and find their secrets? We gotta take them down!
+
+  Site: {{link}}
+
+expose:
+  main:
+  - target: 3000
+    http: panda-facts
+flag: flag{1_c4nt_f1nd_4_g00d_p4nd4_pun}
+name: panda-facts
+provide:
+- index.js

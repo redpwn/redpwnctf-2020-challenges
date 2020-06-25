@@ -1,0 +1,42 @@
+name: Viper
+author: Jim
+description: |-
+  Don't you want your own ascii viper? No? Well here is Viper as a Service. If you experience any issues, send it [here](https://admin-bot.redpwnc.tf/submit?challenge=viper)
+
+  NOTE: The admin bot will only accept websites which match the following regex: `^http:\/\/2020\.redpwnc\.tf:31291\/viper\/[0-9a-f\-]+$`
+
+  Site: {{link}}
+
+flag:
+  file: ./app/flag.txt
+
+provide:
+  - ./viper.tar.gz
+
+containers:
+  app:
+    build: ./app
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports: [31337]
+  nginx:
+    build: ./nginx
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports: [80]
+  redis:
+    image: redis
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports: [6379]
+
+expose:
+  nginx:
+    - target: 80
+      tcp: 31291

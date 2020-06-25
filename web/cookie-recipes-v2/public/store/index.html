@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cookie Recipes</title>
+        <meta name="description" content="Cookie Recipes V2">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <script src="/js/scripts.js"></script>
+        <script src="scripts.js"></script>
+        <div class="page-wrapper">
+            <div class="nav-bar">
+                <ul>
+                    <li><a class="active" href="/store/">Store</a></li>
+                    <li ><a href="/purchases/">Purchases</a></li>
+                </ul>
+            </div>
+            <div class="store-wrapper">
+                <div class="section recipes-wrapper"> 
+                    <h1>Cookie Recipes</h1>
+                    <div id="recipe-cards" class="card-wrapper">
+                        <template id="recipe-card-template">
+                            <div class="card">
+                                <h2>Recipe Name</h2>
+                                <p>Recipe Description</p>
+                                <button>Purchase (1000)</button>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="section info-wrapper">
+                    <h1>User Info</h1>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <h2>Username</h2>
+                            <p id="username"></p>
+                        </div>
+                        <div class="card">
+                            <h2>Balance</h2>
+                            <p id="balance"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section promotion-wrapper">
+                    <h1>Recipe Contest</h1>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <h2>Have a really good cookie recipe?</h2>
+                            <p>Submit a url to our team of reviewers; if they like it, they may even sell it on our store!</p>
+                            <p>If your recipe gets chosen, you will receive 150 free credits.</p>
+                            <p>You may submit as many recipes as you like, but you can only win once.</p>
+                            <iframe src="https://admin-bot.redpwnc.tf/submit?challenge=cookie-recipes-v2"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>{{ note[title] }}</head>
+    <body>
+        <center>
+            <h1>POST-it Note: {{ note["title"] }}</h1>
+            <h3>Contents:</h3>
+            <p style="font-size: x-large;">{{ note["contents"] }}</p>
+            <h3>Links</h3>
+            <!-- we can't be having window.opener or referer leaks, can we? -->
+            <tr>
+            {% for link in note['links'] %}
+                <td><a href="{{ link }}" rel="noopener noreferer" target="_blank">{{ link }}</a></td>
+            {% endfor %}
+            </tr>
+        </center>
+    </body>
+</html>

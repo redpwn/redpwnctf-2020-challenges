@@ -1,0 +1,22 @@
+name: coffer-overflow-1
+author: NotDeGhost
+description: |-
+  The coffers keep getting stronger! You'll need to use the source, Luke.
+
+  `nc {{host}} {{port}}`
+provide:
+- ./bin/coffer-overflow-1
+- ./bin/coffer-overflow-1.c
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31255

@@ -1,0 +1,23 @@
+name: the-library
+author: NotDeGhost
+description: |-
+  There's not a lot of useful functions in the binary itself. I wonder where you can get some...
+
+  `nc {{host}} {{port}}`
+provide:
+- ./bin/the-library
+- ./bin/the-library.c
+- ./bin/libc.so.6
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31350

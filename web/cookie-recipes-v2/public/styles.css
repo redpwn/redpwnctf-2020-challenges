@@ -1,0 +1,14 @@
+.login-wrapper {
+    margin: auto;
+    width: 50%;
+    border-radius: 4px;
+    padding: 30px;
+    background-color: #EEE;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

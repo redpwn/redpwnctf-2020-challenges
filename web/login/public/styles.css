@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #b19cd9;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 54px;
+    margin: 10px;
+}
+
+input {
+    border: none;
+    font-size: 26px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+.center {
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}

@@ -1,0 +1,6 @@
+author: NotDeGhost
+description: It's not just a string, it's a rope!
+flag: flag{r0pes_ar3_just_l0ng_str1ngs}
+name: ropes
+provide:
+- ./bin/ropes

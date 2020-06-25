@@ -1,0 +1,23 @@
+name: four-function-heap
+author: NotDeGhost
+description: |-
+  When ctf writers can't think of interesting problems, there's always
+  four function heap
+
+  `nc {{host}} {{port}}`
+provide:
+- ./four-function-heap.tar.gz
+- ./bin/starter.py
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31774

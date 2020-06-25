@@ -1,0 +1,20 @@
+author: BrownieInMotion
+containers:
+  main:
+    build: .
+    ports:
+    - 3000
+description: |-
+  Uh oh; it looks like they already migrated to a more secure platform.
+  Can you do your thing again? These horrible people must be stopped!
+
+  Site: {{link}}
+
+expose:
+  main:
+  - target: 3000
+    http: panda-facts-v2
+flag: flag{54v3_th3_b335_1n5t34d}
+name: panda-facts-v2
+provide:
+- index.js

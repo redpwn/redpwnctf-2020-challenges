@@ -1,0 +1,21 @@
+name: a-round-mechanism
+author: green beans
+description: |-
+  I found a respectable mainframe, can you help me get in? Flag is in flag.txt
+
+  `nc {{host}} {{port}}`
+provide:
+- ./bin/ARM
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31359

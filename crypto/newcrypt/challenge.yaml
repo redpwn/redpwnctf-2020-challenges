@@ -1,0 +1,9 @@
+name: newcrypt
+author: Tux
+description: |-
+  0x100
+flag:
+  file: ./flag.txt
+provide:
+- ./chall.py
+- ./output

@@ -1,0 +1,9 @@
+author: ginkoid
+description: |-
+  It's important for public keys to be transparent.
+
+  Hint: [certificate-transparency.org](https://www.certificate-transparency.org/)
+flag: flag{c3rTific4t3_7r4n5pArAncY_fTw}
+name: anti-textbook
+provide:
+- ./data.txt

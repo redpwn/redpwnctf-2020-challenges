@@ -1,0 +1,34 @@
+name: expohash
+author: fishy15
+description: |-
+  Fishy is trying to hack into a secret government website again!!! 
+  
+  They learned from fishy's attempts last year, so they created a password of **10^5** integers, and each integer x in the password satisfies **0 <= x <= 2^31**. However, this password was too long for them to check, so they made up a method that they hoped was quicker. They included **10^5** tests that the password checker will do.
+
+  In each test, the computer checks from some left bound L to some right bound R, where **1 <= L <= R <= 10^5**. The computer takes the xor of each value in the range L to R inclusive of the password and checks if that equals the expected value V. Fishy has found the the values for L, R, V for each test, but he needs your help to find a valid password. Can you help him?
+
+  You will be given the L, R, and V values for each test, and each test will be
+  on their own line. For example, the first few tests could look something like:
+
+  ```
+  1 4 6
+  5 12 9
+  574 990 743485
+  ...
+  ```
+
+  Print back the values in the array, each separated by a newline
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31458

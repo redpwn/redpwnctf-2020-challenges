@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mustache": "^4.0.1",
+    "raw-body": "^2.4.1"
+  }
+}

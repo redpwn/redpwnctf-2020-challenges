@@ -1,0 +1,27 @@
+name: jeopardy
+author: Tux
+description: |-
+  The choice is yours...choose your curve!
+
+  `nc {{host}} {{port}}`
+flag:
+  file: ./flag.txt
+provide:
+- ./jeopardy.sage
+
+containers:
+  main:
+    build: .
+    ports:
+    - 9999
+    resources:
+      limits:
+        cpu: 100m
+        memory: 200Mi
+      requests:
+        cpu: 20m
+        memory: 120Mi
+expose:
+  main:
+  - target: 9999
+    tcp: 31542

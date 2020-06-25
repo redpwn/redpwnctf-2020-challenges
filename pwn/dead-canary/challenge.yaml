@@ -1,0 +1,40 @@
+name: dead-canary
+author: NotDeGhost
+description: |-
+  It is a terrible crime to slay a canary. Killing a canary will keep your
+  exploit alive even if you are an inch from segfaults. But at a terrible
+  price.
+
+  `nc {{host}} {{port}}`
+
+  **NOTE:** This and later pwn problems provide Dockerfiles
+  
+  To run on localhost:1337 with the current directory mounted at `/ctf`,
+  ```
+  tar xf dead-canary.tar.gz && echo fake_flag > bin/flag.txt && docker run -v ${PWD}:/ctf --cap-add=SYS_PTRACE --rm --name redpwnctf-dead-canary -itp 1337:9999 $(docker build -q .)
+  ```
+
+  You can get a shell with,
+  ```
+  docker exec -it redpwnctf-dead-canary bash
+  ```
+
+  We've also provided a simple install script to help setup an environment quickly.
+  ```
+  apt-get update && apt-get install -qy curl && curl https://raw.githubusercontent.com/redpwn/dockerfiles/master/quick-install.sh | sh
+  ```
+provide:
+- ./dead-canary.tar.gz
+flag:
+  file: ./bin/flag.txt
+
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 9999
+expose:
+  main:
+  - target: 9999
+    tcp: 31744

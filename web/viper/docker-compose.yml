@@ -1,0 +1,20 @@
+version: "2.2"
+
+services:
+  app:
+    build: ./app
+    cpus: 0.1
+    mem_limit: 100M
+    depends_on:
+      - redis
+    restart: always
+  nginx:
+    build: ./nginx
+    mem_limit: 100M
+    depends_on:
+      - app
+    ports:
+      - "4002:80"
+  redis:
+    image: redis
+    mem_limit: 100M
