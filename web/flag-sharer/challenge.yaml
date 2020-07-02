@@ -7,7 +7,7 @@ containers:
 description: |-
   {{link}}
 
-  Submit at: [flag-sharer-admin-bot.redpwnc.tf/submit?challenge=flag-sharer](https://flag-sharer-admin-bot.redpwnc.tf/submit?challenge=flag-sharer)
+  Submit at: [admin-bot.redpwnc.tf/submit?challenge=flag-sharer](https://admin-bot.redpwnc.tf/submit?challenge=flag-sharer)
 expose:
   main:
   - target: 8000
